@@ -97,6 +97,7 @@ static const char *dmenucmd[] = { "rofi", "-show", "run", NULL };
 static const char *clipcmd[] = { "rofi", "-modi", "\"clipboard:greenclip print\"", "-show", "clipboard", "-run-command", "'{cmd}'", NULL };
 static const char *passcmd[] = { "rofi-pass", NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
+static const char *scrlocker[] = { "betterlockscreen", "-l", NULL };
  
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -144,6 +145,7 @@ static const Key keys[] = {
     // custom commands
     { ALTKEY,                       XK_h,      spawn,          {.v = clipcmd } },
     { ALTKEY,                       XK_p,      spawn,          {.v = passcmd } },
+    { ALTKEY,                       XK_l,      spawn,          {.v = scrlocker } },
     // mediakeys
     { 0, XF86XK_AudioRaiseVolume,              spawn,          SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +10%; kill -37 $(pidof dwmblocks)") },
     { 0, XF86XK_AudioLowerVolume,              spawn,          SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -10%; kill -37 $(pidof dwmblocks)") },
