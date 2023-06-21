@@ -154,8 +154,6 @@ static const Key keys[] = {
     { 0, XF86XK_AudioLowerVolume,              spawn,          SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -10%; kill -37 $(pidof dwmblocks)") },
     { 0, XF86XK_MonBrightnessUp,               spawn,          SHCMD("light -A 10; kill -36 $(pidof dwmblocks)") },
     { 0, XF86XK_MonBrightnessDown,             spawn,          SHCMD("light -U 10; kill -36 $(pidof dwmblocks)") },
-    // { 0, XF86XK_MonBrightnessUp,               spawn,          {.v = (const char*[]){ "light", "-A", "10" } } },
-    // { 0, XF86XK_MonBrightnessDown,             spawn,          {.v = (const char*[]){ "light", "-U", "10" } } },
 };
 
 /* button definitions */
