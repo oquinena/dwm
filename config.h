@@ -95,7 +95,7 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *dmenucmd[] = { "rofi", "-show", "run", NULL };
+static const char *launchercmd[] = { "rofi", "-show", "run", NULL };
 static const char *clipcmd[] = { "rofi", "-modi", "\"clipboard:greenclip print\"", "-show", "clipboard", "-run-command", "'{cmd}'", NULL };
 static const char *passcmd[] = { "rofi-pass", NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
@@ -103,7 +103,7 @@ static const char *scrlocker[] = { "betterlockscreen", "-l", NULL };
  
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_r,      spawn,          {.v = launchercmd } },
 	{ MODKEY,                       XK_Return, spawnsshaware,  {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
